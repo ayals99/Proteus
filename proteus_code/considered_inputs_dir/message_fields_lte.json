@@ -1,0 +1,214 @@
+{
+    "enable_s1": {},
+    "identity_request": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ],
+        "identity_type": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "security_header_type": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            12
+        ]
+    },
+    "authentication_request": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ],
+        "separation_bit": [
+            0,
+            1
+        ],
+        "security_header_type": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            12
+        ]
+    },
+    "security_mode_command": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ],
+        "replay": [
+            0,
+            1
+        ],
+        "EIA": [
+            0,
+            1,
+            2
+        ],
+        "security_header_type": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            12
+        ]
+    },
+    "attach_accept": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ],
+        "replay": [
+            0,
+            1
+        ],
+        "security_header_type": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            12
+        ]
+    },
+    "GUTI_reallocation": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ],
+        "replay": [
+            0,
+            1
+        ],
+        "security_header_type": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            12
+        ]
+    },
+    "rrc_security_mode_command": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ],
+        "EIA": [
+            0,
+            1,
+            2
+        ]
+    },
+    "rrc_reconf": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ]
+    },
+    "attach_reject": {
+        "security_header_type": [
+            0,
+            2
+        ]
+    },
+    "auth_reject": {
+        "security_header_type": [
+            0,
+            2
+        ]
+    },
+    "service_reject": {
+        "security_header_type": [
+            0,
+            2
+        ]
+    },
+    "emm_information": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ]
+    },
+    "counter_check": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ]
+    },
+    "ue_information_request": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ]
+    },
+    "ue_capability_inquiry": {
+        "integrity": [
+            0,
+            1
+        ],
+        "cipher": [
+            0,
+            1
+        ]
+    },
+    "detach_request": {
+        "security_header_type": [
+            0,
+            2
+        ]
+    }
+}

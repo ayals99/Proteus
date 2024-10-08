@@ -1,0 +1,6 @@
+authentication_request / authentication_response
+identity_request / identity_response
+security_mode_command / security_mode_complete
+attach_accept / attach_complete
+rrc_security_mode_command / rrc_security_mode_complete
+GUTI_reallocation / GUTI_reallocation_complete

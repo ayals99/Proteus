@@ -1,0 +1,69 @@
+--enable_s1
+--identity_request
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+    |identity_type :-> 0 - 3 // 0: IMSI, 1: IMEI, 2: IMEISV, 3: TMSI, 4: ID 11
+    |security_header_type :-> 0 - 5, 12 // as specified
+
+--authentication_request
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+    |separation_bit :-> 0 - 1 // 0: bit set to 0, 1: ok
+    |security_header_type :-> 0 - 5, 12 // as specified
+
+--security_mode_command
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+    |replay :-> 0 - 1 // 0: no replay , 1: ok
+    |EIA :-> 0 - 2 // 0: 0, 1: ok, 2: reserved
+    |security_header_type :-> 0 - 5, 12 // as specified
+
+--attach_accept
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+    |replay :-> 0 - 1 // 0: no replay , 1: ok
+    |security_header_type :-> 0 - 5, 12 // as specified
+
+--GUTI_reallocation
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+    |replay :-> 0 - 1 // 0: no replay , 1: ok
+    |security_header_type :-> 0 - 5, 12 // as specified
+
+--rrc_security_mode_command
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+    |EIA :-> 0 - 2 //0: 0, 1: ok, 2 : reserved
+
+--rrc_reconf
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+    |set_srb :-> 0 - 1 // 0: not set, 1: set
+
+--attach_reject
+    |security_header_type :-> 0, 2 // as specified
+
+--auth_reject
+    |security_header_type :-> 0, 2 // as specified
+
+--service_reject
+    |security_header_type :-> 0, 2 // as specified
+
+--emm_information
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+
+--counter_check
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+
+--ue_information_request
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+
+--ue_capability_inquiry
+    |integrity :-> 0 - 1 // 0 : no integrity, 1: protected
+    |cipher :-> 0 - 1 // 0: unciphered, 1: ciphered
+
+--detach_request
+    |security_header_type :-> 0, 2 // as specified

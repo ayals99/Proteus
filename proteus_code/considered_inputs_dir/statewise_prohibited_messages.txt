@@ -1,0 +1,8 @@
+s5::rrc_reconf:integrity == 0 & cipher == 0
+s6::rrc_reconf:integrity == 0 & cipher == 0
+s5::ue_capability_inquiry:integrity == 0 & cipher == 0
+s6::ue_capability_inquiry:integrity == 0 & cipher == 0
+s5::ue_information_request:integrity == 0 & cipher == 0
+s6::ue_information_request:integrity == 0 & cipher == 0
+s5::rrc_security_mode_command:integrity == 0 & cipher == 0
+s6::rrc_security_mode_command:integrity == 0 & cipher == 0

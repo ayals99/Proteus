@@ -1,0 +1,114 @@
+digraph g {
+__start0 [label="" shape="none"];
+
+	node s0 [shape="circle" label="0"]s0;
+	node s1 [shape="circle" label="1"]s1; //auth_req
+	node s2 [shape="circle" label="2"]s2; //sm_cmd
+	node s3 [shape="circle" label="3"]s3; //after sm_cmd
+	node s4 [shape="circle" label="4"]s4; //after attach_accept
+	node s5 [shape="circle" label="5"]s5; //rrc after s3
+	node s6 [shape="circle" label="6"]s6; //rrc after s4
+
+	s0 -> s1 [label=":enable_s1: /:attach_request:"];
+
+	s1 -> s1 [label=":enable_s1: /:attach_request:"];
+	s1 -> s1 [label=":identity_request:integrity == 0 & cipher == 0 & identity_type == 0 & security_header_type == 0 /:identity_response:"];
+	s1 -> s1 [label=":identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 0 /:identity_response:"];
+	s1 -> s2 [label=":authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0 /:authentication_response:"];
+	s1 -> s1 [label=":rrc_reconf:integrity == 0 & cipher == 0 & set_srb == 0/:rrc_reconf_complete:"];
+
+	s1 -> s1 [label=":security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 /:security_mode_reject: emm_cause == 24"];
+	s1 -> s1 [label=":rrc_security_mode_command:integrity == 0 & cipher == 0 & EIA == 1 /:rrc_security_mode_failure:"];
+	s1 -> s1 [label=":attach_accept:integrity == 0 & cipher == 0 & security_header_type == 0 /:null_action:"];
+	s1 -> s1 [label=":GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 /:null_action:"];
+	s1 -> s1 [label=":ue_information_request:integrity == 0 & cipher == 0 /:null_action:"];
+	s1 -> s1 [label=":ue_capability_inquiry:integrity == 0 & cipher == 0 /:rrc_ue_cap_info:"];
+	s1 -> s1 [label=":counter_check:integrity == 0 & cipher == 0 /:null_action:"];
+
+	s2 -> s1 [label=":enable_s1: /:attach_request:"];
+	s2 -> s2 [label=":authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0 /:authentication_response:"];
+	s2 -> s2 [label=":identity_request:integrity == 0 & cipher == 0 & identity_type == 0 & security_header_type == 0 /:identity_response:"];
+	s2 -> s2 [label=":identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 0 /:identity_response:"];
+	s2 -> s3 [label=":security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 /:security_mode_complete:"];
+	s2 -> s2 [label=":rrc_reconf:integrity == 0 & cipher == 0 & set_srb == 0 /:rrc_reconf_complete:"];
+
+	s2 -> s2 [label=":rrc_security_mode_command:integrity == 0 & cipher == 0 & EIA == 1 /:rrc_security_mode_failure:"];
+	s2 -> s2 [label=":attach_accept:integrity == 0 & cipher == 0 & security_header_type == 0 /:null_action:"];
+	s2 -> s2 [label=":GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 /:null_action:"];
+	s2 -> s2 [label=":ue_information_request:integrity == 0 & cipher == 0 /:null_action:"];
+	s2 -> s2 [label=":ue_capability_inquiry:integrity == 0 & cipher == 0 /:rrc_ue_cap_info:"];
+	s2 -> s2 [label=":counter_check:integrity == 0 & cipher == 0 /:null_action:"];
+
+
+	s3 -> s1 [label=":enable_s1: /:attach_request:"];
+	s3 -> s3 [label=":identity_request:integrity == 1 & cipher == 1 & identity_type == 0 & security_header_type == 2 /:identity_response:"];
+	s3 -> s3 [label=":security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 /:security_mode_complete:"];
+	s3 -> s3 [label=":rrc_reconf:integrity == 0 & cipher == 0  & set_srb == 0 /:rrc_reconf_complete:"];
+	s3 -> s4 [label=":attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2 /:attach_complete:"];
+	s3 -> s5 [label=":rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1 /:rrc_security_mode_complete:"];
+
+	s3 -> s3 [label=":GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 /:null_action:"];
+	s3 -> s3 [label=":ue_information_request:integrity == 0 & cipher == 0 /:null_action:"];
+	s3 -> s3 [label=":ue_capability_inquiry:integrity == 0 & cipher == 0 /:rrc_ue_cap_info:"];
+	s3 -> s3 [label=":counter_check:integrity == 0 & cipher == 0 /:null_action:"];
+	s3 -> s3 [label=":emm_information:integrity == 1 & cipher == 1 /:null_action:"];
+
+	s3 -> s0 [label=":auth_reject:security_header_type == 2 / :null_action: "]
+	s3 -> s0 [label=":detach_request:integrity == 1 & cipher == 1 & security_header_type == 2 /:detach_accept:"];
+	s3 -> s3 [label=":auth_reject:security_header_type == 0/:null_action:"];
+
+
+	s4 -> s1 [label=":enable_s1: /:attach_request:"];
+	s4 -> s4 [label=":identity_request:integrity == 1 & cipher == 1 & identity_type == 0 & security_header_type == 2 /:identity_response:"];
+	s4 -> s4 [label=":security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 /:security_mode_complete:"];
+	s4 -> s4 [label=":rrc_reconf:integrity == 0 & cipher == 0 & set_srb == 0 /:rrc_reconf_complete:"];
+	s4 -> s4 [label=":attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2 /:attach_complete:"];
+	s4 -> s6 [label=":rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1 /:rrc_security_mode_complete:"];
+
+	s4 -> s4 [label=":GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 /:null_action:"];
+	s4 -> s4 [label=":ue_information_request:integrity == 0 & cipher == 0 /:null_action:"];
+	s4 -> s4 [label=":ue_capability_inquiry:integrity == 0 & cipher == 0 /:null_action:"];
+	s4 -> s4 [label=":emm_information:integrity == 1 & cipher == 1 /:null_action:"];
+	s4 -> s4 [label=":counter_check:integrity == 0 & cipher == 0 /:null_action:"];
+	s4 -> s0 [label=":detach_request:integrity == 1 & cipher == 1 & security_header_type == 2 /:detach_accept:"];
+
+	s5 -> s1 [label=":enable_s1: /:attach_request:"];
+	s5 -> s5 [label=":identity_request:integrity == 1 & cipher == 1 & identity_type == 0 & security_header_type == 2 /:identity_response:"];
+	s5 -> s5 [label=":security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 /:security_mode_complete:"];
+	s5 -> s6 [label=":attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2 /:attach_complete:"];
+	s5 -> s5 [label=":emm_information:integrity == 1 & cipher == 1 /:null_action:"];
+	s5 -> s6 [label=":rrc_reconf:integrity == 1 & cipher == 1 /:rrc_reconf_complete:"];
+	s5 -> s5 [label=":ue_information_request:integrity == 1 & cipher == 1 /:ue_information_response:"];
+	s5 -> s5 [label=":ue_capability_inquiry:integrity == 1 & cipher == 1 /:rrc_ue_cap_info:"];
+	s5 -> s5 [label=":counter_check:integrity == 1 & cipher == 1 /:counter_check_response:"];
+
+	s5 -> s0 [label=":rrc_security_mode_command:integrity == 0 & cipher == 0 & EIA == 1 /:rrc_security_mode_failure:"];
+	s5 -> s0 [label=":ue_information_request:integrity == 0 & cipher == 0 /:null_action:"];
+	s5 -> s0 [label=":ue_capability_inquiry:integrity == 0 & cipher == 0 /:null_action:"];
+	s5 -> s0 [label=":rrc_reconf:integrity == 0 & cipher == 0 /:null_action:"];
+	s5 -> s0 [label=":counter_check:integrity == 0 & cipher == 0 /:null_action:"];
+	s5 -> s0 [label=":detach_request:integrity == 1 & cipher == 1 & security_header_type == 2 /:detach_accept:"];
+
+	s6 -> s1 [label=":enable_s1: /:attach_request:"];
+	s6 -> s6 [label=":identity_request:integrity == 1 & cipher == 1 & identity_type == 0 & security_header_type == 2 /:identity_response:"];
+	s6 -> s6 [label=":security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 /:security_mode_complete:"];
+	s6 -> s6 [label=":attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2 /:attach_complete:"];
+	s6 -> s6 [label=":rrc_reconf:integrity == 1 & cipher == 1 /:rrc_reconf_complete:"];
+	s6 -> s0 [label=":attach_reject:security_header_type == 2/:null_action:"];
+	s6 -> s6 [label=":attach_reject:security_header_type == 0/:null_action:"];
+	s6 -> s0 [label=":detach_request:integrity == 1 & cipher == 1 & security_header_type == 2 /:detach_accept:"];
+	s6 -> s6 [label=":GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2 /:GUTI_reallocation_complete:"];
+	s6 -> s6 [label=":ue_information_request:integrity == 1 & cipher == 1 /:ue_information_response:"];
+	s6 -> s6 [label=":ue_capability_inquiry:integrity == 1 & cipher == 1 /:rrc_ue_cap_info:"];
+	s6 -> s6 [label=":emm_information:integrity == 1 & cipher == 1 /:null_action:"];
+	s6 -> s6 [label=":counter_check:integrity == 1 & cipher == 1 /:counter_check_response:"];
+
+	s6 -> s0 [label=":service_reject:security_header_type == 2 / :null_action: "]
+	s6 -> s6 [label=":service_reject:security_header_type == 0/:null_action:"];
+
+	s6 -> s0 [label=":rrc_security_mode_command:integrity == 0 & cipher == 0 & EIA == 1 /:rrc_security_mode_failure:"];
+	s6 -> s0 [label=":ue_information_request:integrity == 0 & cipher == 0 /:null_action:"];
+	s6 -> s0 [label=":ue_capability_inquiry:integrity == 0 & cipher == 0 /:null_action:"];
+	s6 -> s0 [label=":rrc_reconf:integrity == 0 & cipher == 0 /:null_action:"];
+	s6 -> s0 [label=":counter_check:integrity == 0 & cipher == 0 /:null_action:"];
+}

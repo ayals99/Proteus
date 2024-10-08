@@ -1,0 +1,89 @@
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 1 ## 0.07692307692307694
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 2 ## 0.07692307692307694
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 3 ## 0.07692307692307694
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 4 ## 0.07692307692307694
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 5 ## 0.07692307692307694
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 12 ## 0.07692307692307694
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 0 & sqn == 1 & security_header_type == 0 ## 0.07692307692307693
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 0 & sqn == 1 & security_header_type == 1 ## 0.07692307692307693
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 0 & sqn == 1 & security_header_type == 2 ## 0.07692307692307693
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 0 & sqn == 1 & security_header_type == 3 ## 0.07692307692307693
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 0 & sqn == 1 & security_header_type == 4 ## 0.07692307692307693
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 0 & sqn == 1 & security_header_type == 5 ## 0.07692307692307693
+authentication_request:integrity == 0 & cipher == 0 & replay == 0 & separation_bit == 0 & sqn == 1 & security_header_type == 12 ## 0.07692307692307693
+rrc_security_mode_command:integrity == 0 & cipher == 0 & EIA == 0 & replay == 0 ## 0.5
+rrc_security_mode_command:integrity == 1 & cipher == 1 & EIA == 2 & replay == 0 ## 0.5
+attach_accept:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 ## 0.14285714285714288
+attach_accept:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 1 ## 0.14285714285714288
+attach_accept:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 2 ## 0.14285714285714288
+attach_accept:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 3 ## 0.14285714285714288
+attach_accept:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 4 ## 0.14285714285714288
+attach_accept:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 5 ## 0.14285714285714288
+attach_accept:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 12 ## 0.14285714285714288
+GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 ## 0.12244897959183675
+GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 1 ## 0.12000000000000002
+GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 2 ## 0.11773940345368918
+GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 3 ## 0.11572700296735906
+GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 4 ## 0.11399255834930658
+GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 5 ## 0.11253886010362697
+GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 12 ## 0.11134872343207923
+GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 1 & security_header_type == 0 ## 0.22724940011373562
+identity_request:integrity == 0 & cipher == 0 & identity_type == 1 & security_header_type == 0 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 1 & security_header_type == 1 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 1 & security_header_type == 2 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 1 & security_header_type == 3 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 1 & security_header_type == 4 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 1 & security_header_type == 5 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 1 & security_header_type == 12 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 0 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 1 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 2 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 3 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 5 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 12 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 3 & security_header_type == 0 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 3 & security_header_type == 1 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 3 & security_header_type == 2 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 3 & security_header_type == 3 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 3 & security_header_type == 4 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 3 & security_header_type == 5 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 3 & security_header_type == 12 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 0 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 1 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 2 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 3 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 4 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 5 ## 0.03571428571428572
+identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 12 ## 0.03571428571428572
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 & EIA == 1 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 1 & EIA == 1 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 2 & EIA == 1 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 4 & EIA == 1 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 5 & EIA == 1 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 12 & EIA == 1 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 & EIA == 2 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 1 & EIA == 2 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 2 & EIA == 2 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 2 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 4 & EIA == 2 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 5 & EIA == 2 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 12 & EIA == 2 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 & EIA == 0 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 1 & EIA == 0 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 2 & EIA == 0 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 0 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 4 & EIA == 0 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 5 & EIA == 0 ## 0.04489795918367348
+security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 12 & EIA == 0 ## 0.04489795918367348
+security_mode_command:integrity == 1 & cipher == 0 & replay == 1 & security_header_type == 3 & EIA == 1 ## 0.05714285714285715
+counter_check:integrity == 0 & cipher == 0 ## 1.0
+ue_information_request:integrity == 0 & cipher == 0 ## 1.0
+ue_capability_inquiry:integrity == 0 & cipher == 0 ## 1.0
+rrc_reconf:integrity == 0 & cipher == 0 & set_srb == 1 ## 1.0
+attach_reject:security_header_type == 0 ## 1.0
+auth_reject:security_header_type == 0 ## 1.0
+service_reject:security_header_type == 0 ## 1.0
+detach_request:integrity == 0 & cipher == 0 & security_header_type == 0 ## 1.0
+emm_information:integrity == 0 & cipher == 0 ## 1.0
