@@ -2,13 +2,20 @@
 Proteus is a black-box, automated, stateful and property-driven testing framework for wireless communication protocols.
 For details, please check out our [paper](https://arxiv.org/pdf/2409.02905) (ACM CCS 2024).
 
-# Tested Protocols
-* 4G LTE
-* Bluetooth Low Energy (BLE) 
+# Tested Protocols and Devices
+* 4G LTE: 11 devices
+* Bluetooth Low Energy (BLE): 12 devices 
 
 # Vulnerabilities 
-Proteus uncovred 
+Proteus uncovered 25 uniqueissues, including 112 instances. Affected vendors have positively
+acknowledged 14 vulnerabilities through 5 CVEs.
 
+# CVEs:
+* CVE-2024-32911
+* CVE-2024-38426
+* CVE-2024-20889
+* CVE-2024-29155
+* CVE-2024-20890
 
 # Instructions
 We provide 2 separate branches incorporating testing for 4G LTE and BLE protocol respectively.
