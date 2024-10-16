@@ -4,7 +4,7 @@ For details, please check out our [paper](https://arxiv.org/pdf/2409.02905) (ACM
 
 # Tested Protocols and Devices
 * 4G LTE: 11 devices (Table 12 in [paper](https://arxiv.org/pdf/2409.02905))
-* Bluetooth Low Energy (BLE): 12 devices (Table 12 in [paper](https://arxiv.org/pdf/2409.02905))
+* Bluetooth Low Energy (BLE): 13 devices (Table 12 in [paper](https://arxiv.org/pdf/2409.02905))
 
 # Vulnerabilities 
 Proteus uncovered 25 unique issues, including 112 instances. Affected vendors have positively
