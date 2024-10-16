@@ -2,6 +2,14 @@
 Proteus is a black-box, automated, stateful and property-driven testing framework for wireless communication protocols.
 For details, please check out our [paper](https://arxiv.org/pdf/2409.02905) (ACM CCS 2024).
 
+# Tested Protocols
+* 4G LTE
+* Bluetooth Low Energy (BLE) 
+
+# Vulnerabilities 
+Proteus uncovred 
+
+
 # Instructions
 We provide 2 separate branches incorporating testing for 4G LTE and BLE protocol respectively.
 We evaluated the framework on Ubuntu 20.04.
