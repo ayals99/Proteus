@@ -1,0 +1,152 @@
+{
+    "reset": {},
+    "scan_req": {},
+    "con_req": {
+        "interval": [
+            0,
+            1
+        ],
+        "timeout": [
+            0,
+            1
+        ],
+        "ll_length": [
+            0,
+            1
+        ],
+        "channel_map": [
+            0,
+            1,
+            2
+        ],
+        "hop": [
+            0,
+            1
+        ]
+    },
+    "version_req": {
+        "ll_length": [
+            0,
+            1,
+            2,
+            5
+        ],
+        "llid": [
+            0,
+            1
+        ],
+        "replay": [
+            0,
+            1
+        ],
+        "op": [
+            0,
+            1
+        ]
+    },
+    "length_req": {
+        "ll_length": [
+            0,
+            1,
+            2
+        ],
+        "tx_rx": [
+            0,
+            1
+        ],
+        "txrx_time": [
+            0,
+            1
+        ]
+    },
+    "feature_req": {},
+    "mtu_req": {
+        "ll_length": [
+            0,
+            1,
+            2,
+            5
+        ],
+        "llid": [
+            0,
+            1
+        ]
+    },
+    "pri_req": {},
+    "pair_req": {
+        "oob": [
+            0,
+            1
+        ],
+        "no_sc": [
+            0,
+            1
+        ],
+        "key": [
+            0,
+            1,
+            2
+        ],
+        "llid": [
+            0,
+            1
+        ],
+        "key_disp": [
+            0,
+            1
+        ],
+        "yes_no": [
+            0,
+            1
+        ]
+    },
+    "pair_confirm": {
+        "wrong_value": [
+            0,
+            1
+        ]
+    },
+    "sm_random_send": {},
+    "key_exchange": {
+        "invalid": [
+            0,
+            1
+        ]
+    },
+    "dh_check": {
+        "invalid": [
+            0,
+            1
+        ]
+    },
+    "enc_req": {
+        "edivrand": [
+            0,
+            1
+        ],
+        "op": [
+            0,
+            1
+        ]
+    },
+    "start_enc_resp": {
+        "plain": [
+            0,
+            1
+        ]
+    },
+    "enc_pause_req": {
+        "plain": [
+            0,
+            1
+        ]
+    },
+    "enc_pause_resp": {
+        "plain": [
+            0,
+            1
+        ]
+    },
+    "unknown_resp": {},
+    "discon_req": {}
+}

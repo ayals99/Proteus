@@ -1,0 +1,37 @@
+con_req:interval == 1 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0
+con_req:interval == 0 & timeout == 1 & ll_length == 0 & channel_map == 0 & hop == 0
+con_req:interval == 0 & timeout == 0 & ll_length == 1 & channel_map == 0 & hop == 0
+con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 1 & hop == 0
+con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 2 & hop == 0
+con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 1
+version_req:ll_length == 1 & llid == 0 & replay == 0 & op == 0
+version_req:ll_length == 2 & llid == 0 & replay == 0 & op == 0
+version_req:ll_length == 0 & llid == 1 & replay == 0 & op == 0
+version_req:ll_length == 0 & llid == 0 & replay == 1 & op == 0
+version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 1
+length_req:ll_length == 1 & tx_rx == 0 & txrx_time == 0
+length_req:ll_length == 2 & tx_rx == 0 & txrx_time == 0
+length_req:ll_length == 0 & tx_rx == 1 & txrx_time == 0
+length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 1
+mtu_req:ll_length == 1 & llid == 0
+mtu_req:ll_length == 2 & llid == 0
+mtu_req:ll_length == 5 & llid == 0
+mtu_req:ll_length == 0 & llid == 1
+pair_req:oob == 0 & no_sc == 0 & key == 1 & llid == 0 & key_disp == 0 & yes_no == 0
+pair_req:oob == 0 & no_sc == 0 & key == 2 & llid == 0 & key_disp == 0 & yes_no == 0
+pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 1 & key_disp == 0 & yes_no == 0
+pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0
+pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 1
+pair_confirm:wrong_value == 1
+key_exchange:invalid == 1 & ll_length == 0
+key_exchange:invalid == 0 & ll_length == 1
+dh_check:invalid == 1
+enc_req:edivrand == 1 & op == 0
+enc_req:edivrand == 0 & op == 1
+start_enc_resp:plain == 1
+enc_pause_req:plain == 1
+enc_pause_resp:plain == 1
+sm_random_send:
+enc_req:edivrand == 1 & op == 0
+enc_req:edivrand == 1 & op == 1
+unknown_resp:

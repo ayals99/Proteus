@@ -1,0 +1,64 @@
+--reset
+--scan_req
+
+--con_req
+    |interval :-> 0 - 1 // 0: ok  1: set to 0
+    |timeout :-> 0 - 1 // 0: ok  1: set to 0
+    |ll_length :-> 0 - 1 // 0: ok  1: extended(max_len for calling function)
+    |channel_map :-> 0 - 2 // 0: ok  1: cleared(0x00)  2: out of bound
+    |hop:-> 0 - 1 // 0: ok  1: set to 0    
+
+--version_req
+    |ll_length :-> 0 - 1 ,2, 5// 0: ok  1: extended(max_len for calling function), 5: set to 5   2: len set to 1
+    |llid :-> 0 - 1 // 0: ok   1: llid set to 0
+    |replay :-> 0 - 1 // 0: ok   1: replay     
+    |op :-> 0 - 1 // 0: ok   1: op set to 0x33(unknown) 
+
+--length_req
+    |ll_length :-> 0 - 2 // 0: ok  1: extended(max_len for calling function) 2: set to 1
+    |tx_rx :-> 0 - 1 // 0: ok  1: set to 0  
+    |txrx_time :-> 0 - 1 // 0: ok  1: set to 0  
+--feature_req
+
+--mtu_req    // (consider adding mtu_zero field)
+    |ll_length :-> 0 - 2 , 5 // 0: ok  1: extended(max_len for calling function) 2: len set to 1 5: truncated: five bytes(0x05)
+    |llid :-> 0 - 1  // 0: ok   1:llid set to 0
+
+--pri_req
+
+--pair_req
+    |oob :-> 0 - 1 // 0: ok  1: set oob   // association method: just works | oob | keyboard_display | display_yes_no
+    |no_sc :-> 0 - 1 // 0: sc  1: set no_sc   // sc  | no_sc (midifit authentication field)
+    |key :-> 0 - 2   // 0: ok  1: set key_zero 2: set key
+    |llid :->  0 - 1 // 0: ok   1: llid set to 0
+    |key_disp :->  0 - 1 // 0: ok   1: set key_disp
+    |yes_no :->  0 - 1 // 0: ok   1: set yes_no
+
+--pair_confirm
+    |wrong_value :-> 0 - 1 // 0: ok  1: set wrong value
+
+--sm_random_send
+
+--key_exchange
+    |invalid :-> 0 - 1 // 0: ok  1: set invalid value
+    |ll_length: -> 0 - 1  // 0: ok   1: extended(max_len for calling function)
+
+--dh_check
+    |invalid :-> 0 - 1 // 0: ok  1: set all field zero
+
+--enc_req
+    |edivrand :-> 0 - 1 // 0: ok   1: set to non 0 value  
+    |op :-> 0 - 1 // 0: ok   1: op set to 0x33(unknown)   
+
+--start_enc_resp
+    |plain :-> 0 - 1 // 0: ok(not set)  1: set plain value
+
+--enc_pause_req
+    |plain :-> 0 - 1 // 0: ok(not set)  1: set plain value
+
+--enc_pause_resp
+    |plain :-> 0 - 1 // 0: ok(not set)  1: set plain value
+
+--unknown_resp  //
+
+--discon_req

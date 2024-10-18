@@ -1,0 +1,10 @@
+[2023-12-23 06:41:38.917475] Logger started
+[2023-12-23 06:42:28.894994] [0;32mI (299537) BLE_ANCS: ESP_GATTC_OPEN_EVT[0m
+[2023-12-23 06:42:28.974199] [0;32mI (299607) BLE_ANCS: ESP_GATTC_DIS_SRVC_CMPL_EVT[0m
+[2023-12-23 06:42:50.532528] [0;33mW (321167) BT_SMP: FOR LE SC LTK IS USED INSTEAD OF STK[0m
+[2023-12-23 06:42:52.796459] [0;33mW (323427) BT_BTM: btm_ble_resolving_list_load_dev Resolving list full [0m
+[2023-12-23 06:42:52.807963] [0;31mE (323437) BT_APPL: bta_gattc_mark_bg_conn unable to find the bg connection mask for: f0:5d:10:ae:d7:fd[0m
+[2023-12-23 06:42:52.813382] [0;31mE (323437) BT_APPL: bta_gattc_mark_bg_conn unable to find the bg connection mask for: f0:5d:10:ae:d7:fd[0m
+[2023-12-23 06:42:52.826200] [0;33mW (323447) BT_BTIF: exceeded the maximum nubmer of bonded devices, delete the last device info : ÄsÉ?ÄsÉ?:ae:d7:f0ÇÊ?[0m
+[2023-12-23 06:42:53.344556] [0;32mI (323987) addr: e9 ca 73 71 35 11 [0m
+[2023-12-23 06:42:53.349967] [0;32mI (323987) BLE_ANCS: pair status = success[0m

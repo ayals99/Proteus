@@ -1,0 +1,19 @@
+[2023-12-23 06:38:53.757454] Logger started
+[2023-12-23 06:40:10.036579] [0;32mI (160677) BLE_ANCS: ESP_GATTC_OPEN_EVT[0m
+[2023-12-23 06:40:10.044486] [0;33mW (160677) BT_BTM: Security Manager: BTM_SetEncryption busy, enqueue request
+[2023-12-23 06:40:10.045096] [0m
+[2023-12-23 06:40:10.095940] [0;32mI (160737) BLE_ANCS: ESP_GATTC_DIS_SRVC_CMPL_EVT[0m
+[2023-12-23 06:40:21.198166] [0;33mW (171827) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x3d[0m
+[2023-12-23 06:40:21.203684] [0;33mW (171837) BT_BTM: Security Manager: BTM_SetEncryption not connected
+[2023-12-23 06:40:21.203814] [0m
+[2023-12-23 06:40:21.209488] [0;31mE (171837) BT_BTM: Device not found
+[2023-12-23 06:40:21.209695] [0m
+[2023-12-23 06:40:21.214931] [0;33mW (171837) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x3d[0m
+[2023-12-23 06:40:21.226123] [0;31mE (171847) BT_APPL: bta_gattc_mark_bg_conn unable to find the bg connection mask for: a1:cf:25:db:4e:af[0m
+[2023-12-23 06:40:21.226373] [0;32mI (171857) addr: a1 cf 25 db 4e af [0m
+[2023-12-23 06:40:21.231624] [0;32mI (171857) BLE_ANCS: pair status = fail[0m
+[2023-12-23 06:40:21.237081] [0;32mI (171867) BLE_ANCS: fail reason = 0x66[0m
+[2023-12-23 06:40:21.242776] [0;31mE (171867) BLE_ANCS: config mtu failed, error status = 85[0m
+[2023-12-23 06:40:21.248389] [0;32mI (171877) BLE_ANCS: ESP_GATTC_CFG_MTU_EVT, Status 133, MTU 23, conn_id 0[0m
+[2023-12-23 06:40:21.261063] [0;32mI (171877) BLE_ANCS: ESP_GATTC_DISCONNECT_EVT, reason = 0x3d[0m
+[2023-12-23 06:40:21.261374] [0;32mI (171887) BLE_ANCS: advertising start success[0m

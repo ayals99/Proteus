@@ -1,0 +1,640 @@
+{
+    "testcases": [
+        {
+            "id": 1,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 2,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 2,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 2,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 3,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 0 & security_header_type == 0",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 4,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 0 & security_header_type == 0",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 5,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 0",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 6,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 0",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 7,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s2:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 3
+        },
+        {
+            "id": 8,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s2:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 3
+        },
+        {
+            "id": 9,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "rrc_reconf:integrity == 0 & cipher == 0 & set_srb == 0",
+                    "output_symbol": "rrc_reconf_complete:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 10,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "rrc_reconf:integrity == 0 & cipher == 0 & set_srb == 0",
+                    "output_symbol": "rrc_reconf_complete:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 11,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_reject:emm_cause == 24",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 12,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "security_mode_command:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_reject:emm_cause == 24",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 13,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 0 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_failure:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 14,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 0 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_failure:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 15,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "attach_accept:integrity == 0 & cipher == 0 & security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 16,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "attach_accept:integrity == 0 & cipher == 0 & security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 17,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 18,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 19,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "ue_information_request:integrity == 0 & cipher == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 20,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "ue_information_request:integrity == 0 & cipher == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 21,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "ue_capability_inquiry:integrity == 0 & cipher == 0",
+                    "output_symbol": "rrc_ue_cap_info:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 22,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "ue_capability_inquiry:integrity == 0 & cipher == 0",
+                    "output_symbol": "rrc_ue_cap_info:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 23,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "counter_check:integrity == 0 & cipher == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        },
+        {
+            "id": 24,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "counter_check:integrity == 0 & cipher == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 2 & security_header_type == 4",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s1:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 2
+        }
+    ]
+}

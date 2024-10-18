@@ -1,0 +1,292 @@
+digraph g {
+__start0 [label="" shape="none"];
+
+	node s0 [shape="circle" label="0"]s0;
+	node s1 [shape="circle" label="1"]s1;
+	node s2 [shape="circle" label="2"]s2;
+	node s3 [shape="circle" label="3"]s3;
+	node s4 [shape="circle" label="4"]s4;
+    node s5 [shape="circle" label="5"]s5;
+    node s6 [shape="circle" label="6"]s6;
+    node s7 [shape="circle" label="7"]s7;
+    node s8 [shape="circle" label="8"]s8;
+    node s10 [shape="circle" label="10"]s10;
+    node s11 [shape="circle" label="11"]s11;
+    node s12 [shape="circle" label="12"]s12;
+    node s13 [shape="circle" label="13"]s13;
+    node s14 [shape="circle" label="14"]s14;
+    node s15 [shape="circle" label="15"]s15;
+    
+    
+
+s0 -> s1 [label=":scan_req: / :scan_resp:"];
+s1 -> s0 [label=":reset: / :null_action: "];
+s1 -> s1 [label=":scan_req: / :scan_resp:"];
+s1 -> s2 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];
+
+
+s2 -> s0 [label=":reset: / :null_action: "];
+s2 -> s1 [label=":scan_req: / :scan_resp:"];
+s2 -> s3 [label=":version_req: ll_length == 0 & llid == 0 & replay == 0 & op == 0 / :version_resp:"];
+s2 -> s2 [label=":version_req: ll_length == 0 & llid == 0 & replay == 0 & op == 1 / :unknown_resp:"];
+s2 -> s3 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 0 / :length_resp:"];
+s2 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 1 & txrx_time == 0 / :length_resp:"];
+s2 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 1 / :length_resp:"];
+s2 -> s3 [label=":feature_req: / :feature_resp:"];
+s2 -> s3 [label=":mtu_req:ll_length == 0 & llid == 0 / :mtu_resp:"];
+s2 -> s3 [label=":pri_req: / :pri_resp:"];
+s2 -> s4 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :pair_resp:"];
+s2 -> s4 [label=":pair_req:oob == 1 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :pair_resp:"];
+s2 -> s12 [label=":pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :pair_resp:"];
+s2 -> s1 [label=":pair_req:oob == 0 & no_sc == 0 & key == 1 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];
+s2 -> s1 [label=":pair_req:oob == 0 & no_sc == 0 & key == 2 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];
+s2 -> s15 [label=":pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0 / :pair_resp:"];
+s2 -> s15 [label=":pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 1 / :null_action:"];
+
+
+s3 -> s0 [label=":reset: / :null_action: "];
+
+s3 -> s1 [label=":scan_req: / :scan_resp:"];    
+s3 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];
+s3 -> s3 [label=":version_req: ll_length == 0 & llid == 0 & replay == 0 & op == 0 / :version_resp:"];
+s3 -> s3 [label=":version_req: ll_length == 0 & llid == 0 & replay == 0 & op == 1 / :unknown_resp:"];
+s3 -> s3 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 0 / :length_resp:"];
+s3 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 1 & txrx_time == 0 / :length_resp:"];
+s3 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 1 / :length_resp:"];
+s3 -> s3 [label=":feature_req: / :feature_resp:"];
+s3 -> s3 [label=":mtu_req:ll_length == 0 & llid == 0 / :mtu_resp:"];
+s3 -> s3 [label=":pri_req: / :pri_resp:"];
+s3 -> s4 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :pair_resp:"];
+s3 -> s4 [label=":pair_req:oob == 1 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :pair_resp:"];
+s3 -> s12 [label=":pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :pair_resp:"];
+s3 -> s1 [label=":pair_req:oob == 0 & no_sc == 0 & key == 1 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];
+s3 -> s1 [label=":pair_req:oob == 0 & no_sc == 0 & key == 2 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];
+s3 -> s15 [label=":pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0 / :pair_resp:"];
+s3 -> s15 [label=":pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 1 / :null_action:"];
+s3 -> s0 [label=":start_enc_resp:plain == 0 / :null_action:"];
+s3 -> s0 [label=":enc_pause_req:plain == 0 / :null_action:"];
+s3 -> s0 [label=":enc_pause_resp:plain == 0 / :null_action:"];
+s3 -> s3 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s3 -> s3 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s3 -> s3 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+
+s4 -> s0 [label=":reset: / :null_action: "];
+s4 -> s1 [label=":scan_req: / :scan_resp:"];  
+s4 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];
+s4 -> s4 [label=":version_req: ll_length == 0 & llid == 0 & replay == 0 & op == 0 / :version_resp:"];
+s4 -> s4 [label=":mtu_req:ll_length == 0 & llid == 0 / :mtu_resp:"];
+s4 -> s4 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];
+s4 -> s4 [label=":pair_confirm:wrong_value == 1 / :null_action:"];
+s4 -> s7 [label=":sm_random_send: / :null_action:"];
+s4 -> s5 [label=":key_exchange:invalid == 0 & ll_length == 0 / :public_key_response_sm_confirm:"];
+s4 -> s4 [label=":key_exchange:invalid == 1 & ll_length == 0 / :null_action:"];
+s4 -> s4 [label=":dh_check:invalid == 1 / :null_action:"];
+s4 -> s7 [label=":enc_req:edivrand == 0 & op == 0 / :enc_resp_ll_reject:"];
+s4 -> s7 [label=":enc_req:edivrand == 1 & op == 0 / :enc_resp_ll_reject:"];
+s4 -> s7 [label=":enc_req:edivrand == 0 & op == 1 / :enc_resp_ll_reject:"];
+s4 -> s0 [label=":start_enc_resp:plain == 0 / :null_action:"];  
+s4 -> s0 [label=":enc_pause_req:plain == 0 / :null_action:"];
+s4 -> s0 [label=":enc_pause_resp:plain == 0 / :null_action:"];
+s4 -> s4 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s4 -> s4 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s4 -> s4 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+
+s5 -> s0 [label=":reset: / :null_action: "];
+s5 -> s1 [label=":scan_req: / :scan_resp:"];  
+s5 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];
+s5 -> s5 [label=":version_req:ll_length == 0 & llid == 0 & replay == 0 & replay == 0 & op == 0 / :version_resp:"];
+s5 -> s5 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 0 / :length_resp:"];
+s5 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 1 & txrx_time == 0 / :length_resp:"];
+s5 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 1 / :length_resp:"];
+s5 -> s5 [label=":feature_req: / :feature_resp:"];
+s5 -> s5 [label=":mtu_req:ll_length == 0 & llid == 0 / :mtu_resp:"];
+s5 -> s5 [label=":pri_req: / :pri_resp:"];
+s5 -> s7 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];
+s5 -> s5 [label=":pair_confirm:wrong_value == 1 / :null_action:"];
+s5 -> s6 [label=":sm_random_send: / :sm_random_received:"];  
+s5 -> s5 [label=":key_exchange:invalid == 1 & ll_length == 0 / :null_action:"];
+s5 -> s5 [label=":dh_check:invalid == 1 / :null_action:"];
+s5 -> s7 [label=":enc_req:edivrand == 0 & op == 0 / :enc_resp_ll_reject:"];
+s5 -> s7 [label=":enc_req:edivrand == 1 & op == 0 / :enc_resp_ll_reject:"];
+s5 -> s7 [label=":enc_req:edivrand == 0 & op == 1 / :enc_resp_ll_reject:"];
+s5 -> s0 [label=":start_enc_resp:plain == 0 / :null_action:"];  
+s5 -> s0 [label=":enc_pause_req:plain == 0 / :null_action:"];
+s5 -> s0 [label=":enc_pause_resp:plain == 0 / :null_action:"];
+s5 -> s5 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s5 -> s5 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s5 -> s5 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+
+s6 -> s0 [label=":reset: / :null_action: "];
+s6 -> s1 [label=":scan_req: / :scan_resp:"];
+s6 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];
+s6 -> s6 [label=":version_req: ll_length == 0 & llid == 0 & replay == 0 & op == 0 / :version_resp:"];
+s6 -> s6 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 0 / :length_resp:"];
+s6 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 1 & txrx_time == 0 / :length_resp:"];
+s6 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 1 / :length_resp:"];
+s6 -> s6 [label=":feature_req: / :feature_resp:"];
+s6 -> s6 [label=":mtu_req:ll_length == 0 & llid == 0 / :mtu_resp:"];
+s6 -> s6 [label=":pri_req: / :pri_resp:"];
+s6 -> s7 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];   // this is observed  from oppo
+s6 -> s6 [label=":pair_confirm:wrong_value == 1 / :null_action:"];
+s6 -> s6 [label=":sm_random_send: / :null_action:"];
+s6 -> s6 [label=":key_exchange:invalid == 1 & ll_length == 0 / :null_action:"];
+s6 -> s8 [label=":dh_check:invalid == 0 / :dh_key_response:"];
+s6 -> s6 [label=":dh_check:invalid == 1 / :null_action:"];
+s6 -> s7 [label=":enc_req:edivrand == 0 & op == 0 / :enc_resp_ll_reject:"];
+s6 -> s7 [label=":enc_req:edivrand == 1 & op == 0 / :enc_resp_ll_reject:"];
+s6 -> s7 [label=":enc_req:edivrand == 0 & op == 1 / :enc_resp_ll_reject:"];
+s6 -> s0 [label=":start_enc_resp:plain == 0 / :null_action:"];  
+s6 -> s0 [label=":enc_pause_req:plain == 0 / :null_action:"];
+s6 -> s0 [label=":enc_pause_resp:plain == 0 / :null_action:"];
+s6 -> s6 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s6 -> s6 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s6 -> s6 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+
+s7 -> s0 [label=":reset: / :null_action: "];
+s7 -> s1 [label=":scan_req: / :scan_resp:"];
+s7 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];  // this is the behavior for oppo, send con_req malicious or not will go to s0
+s7 -> s7 [label=":version_req: ll_length == 0 & llid == 0 & replay == 0 & op == 0 / :null_action:"];
+s7 -> s7 [label=":pair_confirm: wrong_value == 1 / :null_action:"];
+s7 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 0 / :length_resp:"];
+s7 -> s7 [label=":mtu_req:ll_length == 0 & llid == 0 / :mtu_resp:"];
+s7 -> s7 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 / :null_action:"];   // this is observed  from oppo
+s7 -> s7 [label=":enc_pause_resp:plain == 0 / :null_action:"];
+s7 -> s7 [label=":key_exchange:invalid == 1 & ll_length == 0 / :null_action:"];
+s7 -> s7 [label=":dh_check:invalid == 1 / :null_action:"];
+s7 -> s7 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s7 -> s7 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s7 -> s7 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+s8 -> s1 [label=":scan_req: / :scan_resp:"];
+s8 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];  // this is the behavior for oppo, send con_req malicious or not will go to s0
+s8 -> s8 [label=":version_req: ll_length == 0 & llid == 0 & replay == 0 & op == 0 / :null_action:"];
+s8 -> s8 [label=":mtu_req:ll_length == 0 & llid == 0 / :mtu_resp:"];
+s8 -> s7 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];   // this is observed  from oppo
+s8 -> s8 [label=":pair_confirm: wrong_value == 1 / :null_action:"];
+s8 -> s8 [label=":sm_random_send: / :null_action:"];
+s8 -> s8 [label=":key_exchange:invalid == 1 & ll_length == 0 / :null_action:"];
+s8 -> s8 [label=":dh_check:invalid == 1 / :null_action:"];
+s8 -> s10 [label=":enc_req:edivrand == 0 & op == 0 / :enc_resp_start_enc_req:"];
+s8 -> s7 [label=":enc_req:edivrand == 1 & op == 0 / :enc_resp_ll_reject:"];
+s8 -> s7 [label=":enc_req:edivrand == 0 & op == 1 / :enc_resp_ll_reject:"];
+s8 -> s0 [label=":start_enc_resp:plain == 0 / :null_action:"];
+s8 -> s8 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s8 -> s0 [label=":enc_pause_req:plain == 0 / :null_action:"];
+s8 -> s8 [label=":enc_pause_req:plain == 1 / :null_action:"];  // unknown_resp
+s8 -> s0 [label=":enc_pause_resp:plain == 0 / :null_action:"]; 
+s8 -> s8 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+
+s10 -> s0 [label=":reset: / :null_action: "];
+s10 -> s1 [label=":scan_req: / :scan_resp:"];
+s10 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];  // this is the behavior for oppo, send con_req malicious or not will go to s0
+s10 -> s10 [label=":version_req: ll_length == 0 & llid == 0 & replay == 0 & op == 0 / :version_resp:"]; // for oppo this will go to s0
+s10 -> s10 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 0 / :length_resp:"];
+s10 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 1 & txrx_time == 0 / :length_resp:"];
+s10 -> s7 [label=":length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 1 / :length_resp:"];
+s10 -> s7 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];   // this is observed  from oppo
+s10 -> s0 [label=":enc_req:edivrand == 0 & op == 0 / :null_action:"];
+s10 -> s7 [label=":enc_req:edivrand == 1 & op == 0 / :null_action:"];
+s10 -> s7 [label=":enc_req:edivrand == 0 & op == 1 / :null_action:"];
+s10 -> s11 [label=":start_enc_resp:plain == 0 / :start_enc_resp:"];  
+s10 -> s0 [label=":enc_pause_req:plain == 0 / :null_action:"]; //s0, null action
+s10 -> s10 [label=":enc_pause_resp:plain == 0 / :null_action:"]; 
+s10 -> s10 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s10 -> s10 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s10 -> s10 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+s10 -> s10 [label=":unknown_resp: / :null_action:"];
+
+
+s11 -> s0 [label=":reset: / :null_action: "];
+s11 -> s1 [label=":scan_req: / :scan_resp:"];
+s11 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];  // this is the behavior for oppo, send con_req malicious or not will go to s0
+s11 -> s11 [label=":version_req: ll_length == 0 & llid == 0 & replay == 0 & op == 0 / :null_action:"];
+s11 -> s11 [label=":pri_req: / :pri_resp:"];
+s11 -> s7 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"]; 
+s11 -> s11 [label=":enc_pause_req:plain == 0 / :enc_pause_resp:"];  // consider give a new state, after that seems go to s1
+s11 -> s11 [label=":enc_pause_resp:plain == 0 / :null_action:"]; 
+s11 -> s11 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s11 -> s11 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s11 -> s11 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+
+s2 -> s0 [label=":reset: / :null_action: "];
+s12 -> s1 [label=":scan_req: / :scan_resp:"];
+s12 -> s12 [label=":mtu_req:ll_length == 0 & llid == 0 / :mtu_resp:"];
+s12 -> s0 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];  // this is the behavior for oppo, send con_req malicious or not will go to s0
+s12 -> s7 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];   // this is observed  from oppo
+s12 -> s13 [label=":pair_confirm:wrong_value == 0 / :sm_confirm:"]; 
+s12 -> s7 [label=":sm_random_send: / :null_action:"];
+s12 -> s12 [label=":key_exchange:invalid == 0 & ll_length == 0 / :null_action:"]; // add this one
+s12 -> s12 [label=":key_exchange:invalid == 1 & ll_length == 0 / :null_action:"];
+s12 -> s12 [label=":dh_check:invalid == 1 / :null_action:"];
+s12 -> s7 [label=":enc_req:edivrand == 0 & op == 0 / :enc_resp_ll_reject:"];
+s12 -> s7 [label=":enc_req:edivrand == 1 & op == 0 / :enc_resp_ll_reject:"];
+s12 -> s7 [label=":enc_req:edivrand == 0 & op == 1 / :enc_resp_ll_reject:"];
+s12 -> s0 [label=":start_enc_resp:plain == 0 / :null_action:"]; 
+s12 -> s0 [label=":enc_pause_req:plain == 0 / :null_action:"];
+s12 -> s12 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s12 -> s12 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s12 -> s12 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+
+s13 -> s0 [label=":reset: / :null_action: "];
+s13 -> s1 [label=":scan_req: / :scan_resp:"];
+s13 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];
+s13 -> s7 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];
+s13 -> s13 [label=":mtu_req:ll_length == 0 & llid == 0 / :mtu_resp:"];
+s13 -> s13 [label=":pair_confirm:wrong_value == 0 / :null_action:"];
+s13 -> s14 [label=":sm_random_send: / :sm_random_received:"];
+s13 -> s13 [label=":key_exchange:invalid == 1 & ll_length == 0 / :null_action:"];
+s13 -> s13 [label=":dh_check:invalid == 1 / :null_action:"];
+s13 -> s7 [label=":enc_req:edivrand == 0 & op == 0 / :enc_resp_ll_reject:"];
+s13 -> s7 [label=":enc_req:edivrand == 1 & op == 0 / :enc_resp_ll_reject:"];
+s13 -> s7 [label=":enc_req:edivrand == 0 & op == 1 / :enc_resp_ll_reject:"];
+s13 -> s0 [label=":start_enc_resp:plain == 0 / :null_action:"]; // plaintext will be dropped
+s13 -> s0 [label=":enc_pause_req:plain == 0 / :null_action:"];
+s13 -> s0 [label=":enc_pause_resp:plain == 0 / :null_action:"];
+s13 -> s13 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s13 -> s13 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s13 -> s13 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+
+s14 -> s0 [label=":reset: / :null_action: "];
+s14 -> s1 [label=":scan_req: / :scan_resp:"];
+s14 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];
+s14 -> s7 [label=":pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];
+s14 -> s14 [label=":pair_confirm:wrong_value == 0 / :null_action:"];
+s14 -> s10 [label=":enc_req:edivrand == 0 & op == 0 / :enc_resp_start_enc_req:"];
+s14 -> s7 [label=":enc_req:edivrand == 1 & op == 0 / :enc_resp_ll_reject:"];
+s14 -> s7 [label=":enc_req:edivrand == 0 & op == 1 / :enc_resp_ll_reject:"];
+s14 -> s14 [label=":start_enc_resp:plain == 0 / :null_action:"];
+s14 -> s0 [label=":enc_pause_req:plain == 0 / :null_action:"];
+s14 -> s0 [label=":enc_pause_resp:plain == 0 / :null_action:"];
+s14 -> s14 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s14 -> s14 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s14 -> s14 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+
+s15 -> s1 [label=":scan_req: / :scan_resp:"];
+s15 -> s1 [label=":con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 / :null_action:"];
+s15 -> s7 [label=":pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 / :null_action:"];
+s15 -> s7 [label=":pair_confirm:wrong_value == 0 / :null_action:"];
+s15 -> s7 [label=":sm_random_send: / :null_action:"];
+s15 -> s15 [label=":key_exchange:invalid == 1 & ll_length == 0 / :null_action:"];
+s15 -> s15 [label=":dh_check:invalid == 1 / :null_action:"];
+s15 -> s7 [label=":enc_req:edivrand == 0 & op == 0 / :enc_resp_ll_reject:"];
+s15 -> s7 [label=":enc_req:edivrand == 1 & op == 0 / :enc_resp_ll_reject:"];
+s15 -> s7 [label=":enc_req:edivrand == 0 & op == 1 / :enc_resp_ll_reject:"];
+s15 -> s0 [label=":start_enc_resp:plain == 0 / :null_action:"];
+s15 -> s0 [label=":enc_pause_req:plain == 0 / :null_action:"];
+s15 -> s0 [label=":enc_pause_resp:plain == 0 / :null_action:"];
+s15 -> s15 [label=":start_enc_resp:plain == 1 / :null_action:"];
+s15 -> s15 [label=":enc_pause_req:plain == 1 / :null_action:"];
+s15 -> s15 [label=":enc_pause_resp:plain == 1 / :null_action:"];
+
+
+
+}

@@ -1,0 +1,20 @@
+[2023-12-07 05:07:51.224138] Logger started
+[2023-12-07 05:08:40.814017] [0;32mI (1211767) BLE_ANCS: ESP_GATTC_OPEN_EVT[0m
+[2023-12-07 05:08:40.893782] [0;32mI (1211847) BLE_ANCS: ESP_GATTC_DIS_SRVC_CMPL_EVT[0m
+[2023-12-07 05:08:48.056533] [0;33mW (1219007) BT_HCI: reassemble_and_dispatch found l2cap full length 65 less than the hci length 251.
+[2023-12-07 05:08:48.056665] [0m
+[2023-12-07 05:08:48.064239] [0;33mW (1219007) BT_L2CAP: L2CAP - bad length in pkt. Exp: 65  Act: 243[0m
+[2023-12-07 05:09:10.896064] [0;33mW (1241847) BT_GATT: gatt_rsp_timeout disconnecting...[0m
+[2023-12-07 05:09:10.901677] [0;33mW (1241847) BT_HCI: hci cmd send: disconnect: hdl 0x1, rsn:0x13[0m
+[2023-12-07 05:09:10.907550] [0;33mW (1241847) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x16[0m
+[2023-12-07 05:09:10.912982] [0;32mI (1241867) addr: ba 8e 5d de af 31 [0m
+[2023-12-07 05:09:10.913650] [0;32mI (1241867) BLE_ANCS: pair status = fail[0m
+[2023-12-07 05:09:10.919000] [0;32mI (1241867) BLE_ANCS: fail reason = 0x66[0m
+[2023-12-07 05:09:10.924131] [0;31mE (1241867) BLE_ANCS: config mtu failed, error status = 85[0m
+[2023-12-07 05:09:10.934981] [0;32mI (1241877) BLE_ANCS: ESP_GATTC_CFG_MTU_EVT, Status 133, MTU 23, conn_id 0[0m
+[2023-12-07 05:09:10.940716] [0;32mI (1241887) BLE_ANCS: ESP_GATTC_DISCONNECT_EVT, reason = 0x16[0m
+[2023-12-07 05:09:10.946525] [0;31mE (1241887) BT_BTM: Device not found
+[2023-12-07 05:09:10.946692] [0m
+[2023-12-07 05:09:10.951708] [0;33mW (1241897) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x16[0m
+[2023-12-07 05:09:10.962785] [0;31mE (1241897) BT_APPL: bta_gattc_mark_bg_conn unable to find the bg connection mask for: ba:8e:5d:de:af:31[0m
+[2023-12-07 05:09:10.964815] [0;32mI (1241907) BLE_ANCS: advertising start success[0m

@@ -1,0 +1,20 @@
+[2023-12-07 05:01:45.669513] Logger started
+[2023-12-07 05:02:25.684699] [0;32mI (836637) BLE_ANCS: ESP_GATTC_OPEN_EVT[0m
+[2023-12-07 05:02:25.763434] [0;32mI (836717) BLE_ANCS: ESP_GATTC_DIS_SRVC_CMPL_EVT[0m
+[2023-12-07 05:02:35.671078] [0;33mW (846617) BT_SMP: Rcvd from the peer cmd 0x01 with Maximum Encryption             Key value (0xfe) greater than supported by stack).
+[2023-12-07 05:02:35.671439] [0m
+[2023-12-07 05:02:35.676928] [0;32mI (846627) addr: ae 8b 8c 7a c5 9d [0m
+[2023-12-07 05:02:35.678104] [0;32mI (846627) BLE_ANCS: pair status = fail[0m
+[2023-12-07 05:02:35.683137] [0;32mI (846627) BLE_ANCS: fail reason = 0x57[0m
+[2023-12-07 05:02:38.669416] [0;33mW (849627) BT_HCI: hci cmd send: disconnect: hdl 0x2, rsn:0x13[0m
+[2023-12-07 05:02:38.675122] [0;33mW (849627) BT_BTM: btm_sec_clr_temp_auth_service() - no dev CB
+[2023-12-07 05:02:38.675246] [0m
+[2023-12-07 05:02:38.680946] [0;33mW (849627) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x16[0m
+[2023-12-07 05:02:38.686234] [0;31mE (849627) BLE_ANCS: config mtu failed, error status = 85[0m
+[2023-12-07 05:02:38.691772] [0;32mI (849637) BLE_ANCS: ESP_GATTC_CFG_MTU_EVT, Status 133, MTU 23, conn_id 0[0m
+[2023-12-07 05:02:38.702860] [0;32mI (849647) BLE_ANCS: ESP_GATTC_DISCONNECT_EVT, reason = 0x16[0m
+[2023-12-07 05:02:38.703342] [0;32mI (849657) BLE_ANCS: advertising start success[0m
+[2023-12-07 05:02:38.708356] [0;31mE (849657) BT_BTM: Device not found
+[2023-12-07 05:02:38.708461] [0m
+[2023-12-07 05:02:38.714166] [0;33mW (849657) BT_HCI: hcif disc complete: hdl 0x2, rsn 0x16[0m
+[2023-12-07 05:02:38.725192] [0;31mE (849667) BT_APPL: bta_gattc_mark_bg_conn unable to find the bg connection mask for: ae:8b:8c:7a:c5:9d[0m

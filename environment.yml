@@ -1,4 +1,4 @@
-name: proteus
+name: lteattacker
 channels:
   - defaults
 dependencies:

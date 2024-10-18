@@ -1,0 +1,72 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+
+# Config files #
+######################
+BLEController/ble_config.json
+BLEController/addr_config.json
+log_executor/ble.properties
+log_executor/input
+log_executor/input_saved
+statelearner/src/ble.properties
+statelearner/src/plain_replay.log
+statelearner/src/resume.log
+statelearner/freq.txt
+statelearner/inconsistent.log
+statelearner/Inconsistent Query.txt
+
+
+statelearner/my_database.sqlite
+
+
+# IDE generated files #
+######################
+*.iml
+*.idea/
+*.settings/
+*.vscode/
+
+log_executor/src/.idea/
+log_executor/.idea/
+statelearner/.idea/
+statelearner/target/
+statelearner/out/
+

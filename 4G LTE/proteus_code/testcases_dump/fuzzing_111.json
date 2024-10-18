@@ -1,0 +1,3304 @@
+{
+    "testcases": [
+        {
+            "id": 1,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 7,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 2,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "identity_request:integrity == 1 & cipher == 1 & identity_type == 0 & security_header_type == 2",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 3,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "mutation( identity_request , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]*):mutation( integrity == 1 & cipher == 1 & identity_type == 0 & security_header_type == 2 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 4,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 5,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "mutation( security_mode_command , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]*):mutation( integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 6,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 7,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "mutation( attach_accept , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]*):mutation( integrity == 1 & cipher == 1 & security_header_type == 2 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 8,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "GUTI_reallocation_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 9,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "mutation( GUTI_reallocation , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]*):mutation( integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 10,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "emm_information:integrity == 1 & cipher == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 11,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "mutation( emm_information , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]*):mutation( integrity == 1 & cipher == 1 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 12,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "identity_request:integrity == 1 & cipher == 1 & identity_type == 0 & security_header_type == 2",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 13,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "mutation( identity_request , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]*):mutation( integrity == 1 & cipher == 1 & identity_type == 0 & security_header_type == 2 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 14,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 15,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "mutation( security_mode_command , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]*):mutation( integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 16,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "mutation( attach_accept , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]*):mutation( integrity == 1 & cipher == 1 & security_header_type == 2 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 17,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "emm_information:integrity == 1 & cipher == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 18,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "mutation( emm_information , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]*):mutation( integrity == 1 & cipher == 1 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>|<::counter_check:, ::$:>|<::ue_information_request:, ::$:>|<::ue_capability_inquiry:, ::$:>|<::rrc_security_mode_command:, ::$:>|<::rrc_reconf:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 19,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "identity_request:integrity == 1 & cipher == 1 & identity_type == 0 & security_header_type == 2",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 20,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( identity_request , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 1 & cipher == 1 & identity_type == 0 & security_header_type == 2 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 21,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 22,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( security_mode_command , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 23,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_reconf:integrity == 0 & cipher == 0  & set_srb == 0",
+                    "output_symbol": "rrc_reconf_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 24,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( rrc_reconf , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0  & set_srb == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 25,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 26,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( attach_accept , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 1 & cipher == 1 & security_header_type == 2 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 27,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 28,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 29,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( GUTI_reallocation , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 30,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "ue_information_request:integrity == 0 & cipher == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 31,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( ue_information_request , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 32,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "ue_capability_inquiry:integrity == 0 & cipher == 0",
+                    "output_symbol": "rrc_ue_cap_info:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 33,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( ue_capability_inquiry , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 34,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "counter_check:integrity == 0 & cipher == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 35,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( counter_check , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 36,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "emm_information:integrity == 1 & cipher == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 37,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( emm_information , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 1 & cipher == 1 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 38,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 39,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( authentication_request , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 40,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 0 & security_header_type == 0",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 41,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( identity_request , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 & identity_type == 0 & security_header_type == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 42,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "identity_request:integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 0",
+                    "output_symbol": "identity_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 43,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( identity_request , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 & identity_type == 4 & security_header_type == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 44,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( security_mode_command , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 45,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "rrc_reconf:integrity == 0 & cipher == 0 & set_srb == 0",
+                    "output_symbol": "rrc_reconf_complete:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 46,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( rrc_reconf , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 & set_srb == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 47,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 0 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_failure:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 48,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( rrc_security_mode_command , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 & EIA == 1 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 49,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "attach_accept:integrity == 0 & cipher == 0 & security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 50,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( attach_accept , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 & security_header_type == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 51,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "GUTI_reallocation:integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 52,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( GUTI_reallocation , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 & replay == 0 & security_header_type == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 53,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "ue_information_request:integrity == 0 & cipher == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 54,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( ue_information_request , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 55,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "ue_capability_inquiry:integrity == 0 & cipher == 0",
+                    "output_symbol": "rrc_ue_cap_info:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 56,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( ue_capability_inquiry , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 57,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "counter_check:integrity == 0 & cipher == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 58,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "enable_s1:",
+                    "output_symbol": "attach_request:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "authentication_request:integrity == 0 & cipher == 0 & separation_bit == 1 & sqn == 1 & security_header_type == 0",
+                    "output_symbol": "authentication_response:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( counter_check , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]*):mutation( integrity == 0 & cipher == 0 , ^[<::attach_reject:, ::$:>|<::auth_reject:, ::$:>|<::detach_request:, ::$:>|<::service_reject:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "security_mode_command:integrity == 1 & cipher == 0 & replay == 0 & security_header_type == 3 & EIA == 1",
+                    "output_symbol": "security_mode_complete:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "rrc_security_mode_command:integrity == 1 & cipher == 0 & EIA == 1",
+                    "output_symbol": "rrc_security_mode_complete:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "attach_accept:integrity == 1 & cipher == 1 & security_header_type == 2",
+                    "output_symbol": "attach_complete:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "attach_reject:security_header_type == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                },
+                {
+                    "initial_state": "s6:",
+                    "input_symbol": "GUTI_reallocation:integrity == 1 & cipher == 1 & replay == 0 & security_header_type == 2",
+                    "output_symbol": "null_action:",
+                    "next_state": "s6:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 8,
+            "use_count": 0,
+            "num_states_visited": 6
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+[2023-12-05 06:56:19.494865] Logger started
+[2023-12-05 06:57:11.449830] [0;32mI (5940047) BLE_ANCS: ESP_GATTC_OPEN_EVT[0m
+[2023-12-05 06:57:11.527486] [0;32mI (5940117) BLE_ANCS: ESP_GATTC_DIS_SRVC_CMPL_EVT[0m
+[2023-12-05 06:57:32.505141] [0;33mW (5961097) BT_SMP: FOR LE SC LTK IS USED INSTEAD OF STK[0m
+[2023-12-05 06:57:34.774391] [0;33mW (5963367) BT_BTM: btm_ble_resolving_list_load_dev Resolving list full [0m
+[2023-12-05 06:57:34.785114] [0;31mE (5963367) BT_APPL: bta_gattc_mark_bg_conn unable to find the bg connection mask for: fc:dd:a1:e8:44:87[0m
+[2023-12-05 06:57:34.790714] [0;31mE (5963367) BT_APPL: bta_gattc_mark_bg_conn unable to find the bg connection mask for: fc:dd:a1:e8:44:87[0m
+[2023-12-05 06:57:34.803789] [0;33mW (5963377) BT_BTIF: exceeded the maximum nubmer of bonded devices, delete the last device info : ÄsÉ?ÄsÉ?:e8:44:8t½Ê?[0m
+[2023-12-05 06:57:35.379146] [0;32mI (5963977) addr: 60 31 7e e0 25 f3 [0m
+[2023-12-05 06:57:35.384494] [0;32mI (5963977) BLE_ANCS: pair status = success[0m
+[2023-12-05 06:57:39.833640] [0;33mW (5968427) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x8[0m
+[2023-12-05 06:57:39.839301] [0;33mW (5968427) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x8[0m
+[2023-12-05 06:57:39.845055] [0;31mE (5968427) BLE_ANCS: config mtu failed, error status = 85[0m
+[2023-12-05 06:57:39.854736] [0;32mI (5968427) BLE_ANCS: ESP_GATTC_CFG_MTU_EVT, Status 133, MTU 23, conn_id 0[0m
+[2023-12-05 06:57:39.856403] [0;32mI (5968437) BLE_ANCS: ESP_GATTC_DISCONNECT_EVT, reason = 0x8[0m
+[2023-12-05 06:57:39.861867] [0;32mI (5968447) BLE_ANCS: advertising start success[0m

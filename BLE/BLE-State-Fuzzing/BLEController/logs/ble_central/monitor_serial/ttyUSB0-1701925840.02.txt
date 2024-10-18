@@ -1,0 +1,15 @@
+[2023-12-07 05:10:40.019247] Logger started
+[2023-12-07 05:11:29.765785] [0;32mI (1380717) BLE_ANCS: ESP_GATTC_OPEN_EVT[0m
+[2023-12-07 05:11:29.865225] [0;32mI (1380817) BLE_ANCS: ESP_GATTC_DIS_SRVC_CMPL_EVT[0m
+[2023-12-07 05:11:39.228058] [0;33mW (1390177) BT_APPL: gattc_conn_cb: if=3 st=0 id=3 rsn=0x3d[0m
+[2023-12-07 05:11:39.229678] [0;31mE (1390177) BT_BTM: Device not found
+[2023-12-07 05:11:39.230190] [0m
+[2023-12-07 05:11:39.239090] [0;33mW (1390177) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x3d[0m
+[2023-12-07 05:11:39.245545] [0;31mE (1390187) BT_APPL: bta_gattc_mark_bg_conn unable to find the bg connection mask for: f6:f3:1c:8f:6f:c4[0m
+[2023-12-07 05:11:39.250709] [0;32mI (1390197) addr: f6 f3 1c 8f 6f c4 [0m
+[2023-12-07 05:11:39.256343] [0;32mI (1390197) BLE_ANCS: pair status = fail[0m
+[2023-12-07 05:11:39.261569] [0;32mI (1390207) BLE_ANCS: fail reason = 0x66[0m
+[2023-12-07 05:11:39.267152] [0;31mE (1390207) BLE_ANCS: config mtu failed, error status = 85[0m
+[2023-12-07 05:11:39.273343] [0;32mI (1390217) BLE_ANCS: ESP_GATTC_CFG_MTU_EVT, Status 133, MTU 23, conn_id 0[0m
+[2023-12-07 05:11:39.278983] [0;32mI (1390217) BLE_ANCS: ESP_GATTC_DISCONNECT_EVT, reason = 0x3d[0m
+[2023-12-07 05:11:39.285536] [0;32mI (1390227) BLE_ANCS: advertising start success[0m
