@@ -9,14 +9,12 @@ import os
 
 
 
-deviceName = "oppo"     #"Zephyr", "user_Pixel" # modify device name here
+deviceName = "WEIS0671"     #"Zephyr", "user_Pixel" # modify device name here
 deviceAddress = "00:00:00:00:00:00"    
-import os
-import subprocess
 
 
 
-def SlaveAddressFinder(device_name = "oppo"): # modify device name here
+def SlaveAddressFinder(device_name = "WEIS0671"): # modify device name here
     print("SlaveAddressFinder for device: " + device_name)
     global deviceName
     deviceName = device_name
@@ -37,11 +35,14 @@ def setDeviceAddress(device_add):
 
 
 def reset_blueZ(timeoutSeconds):
+    code_path = "/home/tester/Desktop/Proteus/BLE"
     try:
-        subprocess.Popen("/home/usr/Desktop/proteous/BLE-State-Fuzzing/log_executor/src/remove_bluetooth_devices.sh", shell=True)
+        subprocess.Popen(
+            os.path.join(code_path, "BLE-State-Fuzzing/log_executor/src/remove_bluetooth_devices.sh"), 
+            shell=True)
         time.sleep(2)
 
-        subprocess.Popen("echo \"password\" | sudo -S /home/user/Desktop/proteus/BLE-State-Fuzzing/off-breder.sh", shell=True) # modify password
+        subprocess.Popen(f"echo \"password\" | sudo -S {os.path.join(code_path, 'BLE-State-Fuzzing/off-breder.sh')}", shell=True) # modify password
 
         time.sleep(1)
         # Uncomment the next line to print output from the script
@@ -56,7 +57,6 @@ def findAddressWithName(timeout_seconds):
     # resetting bluetooth devices. Otherwise wrong address may come up
     reset_thread = threading.Thread(target=reset_blueZ, args=(timeout_seconds,))
     reset_thread.start()
-
 
     try:
         

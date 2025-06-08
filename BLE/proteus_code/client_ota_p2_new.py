@@ -539,7 +539,8 @@ def send_created_testcases():
     log_file_path_passed = create_new_directory_for_current_run('passed_testcases')
     log_file_path_statistics = create_new_directory_for_current_run('final_statistics')
     log_file_path_inputs = create_new_directory_for_current_run('log_testcases')
-    log_file_path_ota_time_query = create_new_directory_for_current_run('ota_time_testcases', True)
+    log_file_path_ota_time_query = create_new_directory_for_current_run('ota_time_testcases') # was True
+        # , True)
 
     create_table(device_name)
 

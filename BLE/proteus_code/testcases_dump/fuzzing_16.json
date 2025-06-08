@@ -1,0 +1,3418 @@
+{
+    "testcases": [
+        {
+            "id": 1,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 5,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 2,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 3,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "mutation( version_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]*):mutation( ll_length == 0 & llid == 0 & replay == 0 & op == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 4,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "mtu_req:ll_length == 0 & llid == 0",
+                    "output_symbol": "mtu_resp:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 5,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "mutation( mtu_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]*):mutation( ll_length == 0 & llid == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 6,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 7,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "mutation( pair_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]*):mutation( oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 8,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "pair_confirm:wrong_value == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 9,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "mutation( pair_confirm , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]*):mutation( wrong_value == 1 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 10,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "sm_random_send:",
+                    "output_symbol": "null_action:",
+                    "next_state": "s7:"
+                },
+                {
+                    "initial_state": "s7:",
+                    "input_symbol": "key_exchange:",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s7:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 11,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "sm_random_send:",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 12,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                },
+                {
+                    "initial_state": "s5:",
+                    "input_symbol": "key_exchange:",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 13,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 14,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 1 & ll_length == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 15,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "mutation( key_exchange , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]*):mutation( invalid == 1 & ll_length == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 16,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "dh_check:invalid == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 17,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "mutation( dh_check , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]*):mutation( invalid == 1 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 18,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "enc_req:edivrand == 0 & op == 0",
+                    "output_symbol": "enc_resp_ll_reject:",
+                    "next_state": "s7:"
+                },
+                {
+                    "initial_state": "s7:",
+                    "input_symbol": "key_exchange:",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s7:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 19,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "enc_req:edivrand == 0 & op == 0",
+                    "output_symbol": "enc_resp_ll_reject:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 20,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "enc_req:edivrand == 1 & op == 0",
+                    "output_symbol": "enc_resp_ll_reject:",
+                    "next_state": "s7:"
+                },
+                {
+                    "initial_state": "s7:",
+                    "input_symbol": "key_exchange:",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s7:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 21,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "enc_req:edivrand == 1 & op == 0",
+                    "output_symbol": "enc_resp_ll_reject:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 22,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "enc_req:edivrand == 0 & op == 1",
+                    "output_symbol": "enc_resp_ll_reject:",
+                    "next_state": "s7:"
+                },
+                {
+                    "initial_state": "s7:",
+                    "input_symbol": "key_exchange:",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s7:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 23,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "enc_req:edivrand == 0 & op == 1",
+                    "output_symbol": "enc_resp_ll_reject:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 24,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "start_enc_resp:plain == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 25,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "enc_pause_req:plain == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 26,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "enc_pause_resp:plain == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 27,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "start_enc_resp:plain == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 28,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "mutation( start_enc_resp , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]*):mutation( plain == 1 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 29,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "enc_pause_req:plain == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 30,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "mutation( enc_pause_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]*):mutation( plain == 1 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 31,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "enc_pause_resp:plain == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 32,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "mutation( enc_pause_resp , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]*):mutation( plain == 1 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 33,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 1 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0",
+                    "output_symbol": "pair_resp:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 34,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s12:"
+                },
+                {
+                    "initial_state": "s12:",
+                    "input_symbol": "pair_confirm:wrong_value == 0",
+                    "output_symbol": "sm_confirm:",
+                    "next_state": "s13:"
+                },
+                {
+                    "initial_state": "s13:",
+                    "input_symbol": "key_exchange:",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s13:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 35,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s15:"
+                },
+                {
+                    "initial_state": "s15:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s7:"
+                },
+                {
+                    "initial_state": "s7:",
+                    "input_symbol": "key_exchange:",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s7:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 6
+        },
+        {
+            "id": 36,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 37,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( version_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( ll_length == 0 & llid == 0 & replay == 0 & op == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 38,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 1",
+                    "output_symbol": "unknown_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 39,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( version_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( ll_length == 0 & llid == 0 & replay == 0 & op == 1 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 40,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 0",
+                    "output_symbol": "length_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 41,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( length_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( ll_length == 0 & tx_rx == 0 & txrx_time == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 42,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "length_req:ll_length == 0 & tx_rx == 1 & txrx_time == 0",
+                    "output_symbol": "length_resp:",
+                    "next_state": "s7:"
+                },
+                {
+                    "initial_state": "s7:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s7:"
+                },
+                {
+                    "initial_state": "s7:",
+                    "input_symbol": "key_exchange:",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s7:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 43,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "length_req:ll_length == 0 & tx_rx == 1 & txrx_time == 0",
+                    "output_symbol": "length_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 44,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 1",
+                    "output_symbol": "length_resp:",
+                    "next_state": "s7:"
+                },
+                {
+                    "initial_state": "s7:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s7:"
+                },
+                {
+                    "initial_state": "s7:",
+                    "input_symbol": "key_exchange:",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s7:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 45,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 1",
+                    "output_symbol": "length_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 46,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "feature_req:",
+                    "output_symbol": "feature_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 47,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( feature_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation(  , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 48,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mtu_req:ll_length == 0 & llid == 0",
+                    "output_symbol": "mtu_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 49,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( mtu_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( ll_length == 0 & llid == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 50,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pri_req:",
+                    "output_symbol": "pri_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 51,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( pri_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation(  , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 52,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "start_enc_resp:plain == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 53,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "enc_pause_req:plain == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 54,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "enc_pause_resp:plain == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 55,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "start_enc_resp:plain == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 56,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( start_enc_resp , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( plain == 1 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 57,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "enc_pause_req:plain == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 58,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( enc_pause_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( plain == 1 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 59,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "enc_pause_resp:plain == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 60,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "mutation( enc_pause_resp , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( plain == 1 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 61,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "pair_confirm:wrong_value == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 4
+        },
+        {
+            "id": 62,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 1 & ll_length == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 4
+        },
+        {
+            "id": 63,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "dh_check:invalid == 1",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 4
+        },
+        {
+            "id": 64,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( version_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( ll_length == 0 & llid == 0 & replay == 0 & op == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 65,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 1",
+                    "output_symbol": "unknown_resp:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 66,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( version_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( ll_length == 0 & llid == 0 & replay == 0 & op == 1 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 67,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 0",
+                    "output_symbol": "length_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 68,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( length_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( ll_length == 0 & tx_rx == 0 & txrx_time == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 69,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "length_req:ll_length == 0 & tx_rx == 1 & txrx_time == 0",
+                    "output_symbol": "length_resp:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 70,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "length_req:ll_length == 0 & tx_rx == 0 & txrx_time == 1",
+                    "output_symbol": "length_resp:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 71,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "feature_req:",
+                    "output_symbol": "feature_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 72,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( feature_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation(  , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 73,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mtu_req:ll_length == 0 & llid == 0",
+                    "output_symbol": "mtu_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 74,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( mtu_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation( ll_length == 0 & llid == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 75,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "pri_req:",
+                    "output_symbol": "pri_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": false,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        },
+        {
+            "id": 76,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "mutation( pri_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]*):mutation(  , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:, ::$:>|<::pair_req:, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "version_req:ll_length == 0 & llid == 0 & replay == 0 & op == 0",
+                    "output_symbol": "version_resp:",
+                    "next_state": "s3:"
+                },
+                {
+                    "initial_state": "s3:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 1 & key == 0 & llid == 0 & key_disp == 1 & yes_no == 0",
+                    "output_symbol": "null_action:",
+                    "next_state": "s4:"
+                },
+                {
+                    "initial_state": "s4:",
+                    "input_symbol": "key_exchange:invalid == 0 & ll_length == 0",
+                    "output_symbol": "public_key_response_sm_confirm:",
+                    "next_state": "s5:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 6,
+            "use_count": 0,
+            "num_states_visited": 5
+        }
+    ]
+}

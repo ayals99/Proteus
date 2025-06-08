@@ -2,13 +2,16 @@ sudo apt update
 sudo apt install -y build-essential gcc make perl dkms
 sudo apt install -y bluez-tools
 sudo apt install -y python
-sudo apt install -y python-pip
-sudo apt install -y python-pydot python-pydot-ng graphviz libgraphviz-dev
+# sudo apt install -y python-pip
+# sudo apt install -y python-pydot python-pydot-ng graphviz libgraphviz-dev
+sudo apt install -y graphviz libgraphviz-dev pkg-config
 
 
 sudo /usr/bin/python2.7 -m pip install \
 setuptools \
 nrfutil \
+pydot \
+pydot-ng \
 python-engineio==3.11.2 \
 python-socketio==4.4.0 
 

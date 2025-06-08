@@ -22,7 +22,8 @@ from serial import SerialException
 import time
 # PyCryptodome imports
 from Crypto.Cipher import AES
-from thread import *
+# from thread import *
+from _thread import *
 import threading
 # Flask imports
 from flask import Flask, request
@@ -473,8 +474,10 @@ class BLECentralMethods(object):  # type: HierarchicalGraphMachine
     # Internal variables
     master_address_raw = None
     slave_address_raw = None
-    config_file = '/home/user/Desktop/proteus/BLE-State-Fuzzing/config_files/ble_config.json'
-    addr_file = '/home/user/Desktop/proteus/BLE-State-Fuzzing/config_files/addr_config.json'
+
+    # 
+    config_file = '/home/tester/Desktop/Proteus/BLE/BLE-State-Fuzzing/config_files/ble_config.json'
+    addr_file = '/home/tester/Desktop/Proteus/BLE/BLE-State-Fuzzing/config_files/addr_config.json'
     iterations = 0
     master_address_type = None
 
@@ -606,9 +609,9 @@ class BLECentralMethods(object):  # type: HierarchicalGraphMachine
                                              enable_webserver=True)
 
         # Start serial monitor to detect crashes if available
-        self.monitor = Monitor(self.monitor_serial_port, self.monitor_serial_baud,
-                               magic_string=self.monitor_serial_magic_string,
-                               user_callback=self.scan_timeout_detected)
+        # self.monitor = Monitor(self.monitor_serial_port, self.monitor_serial_baud,
+        #                        magic_string=self.monitor_serial_magic_string,
+        #                        user_callback=self.scan_timeout_detected)
 
     # Configuration functions
     # def get_config(self):

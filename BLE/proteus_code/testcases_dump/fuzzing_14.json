@@ -1,0 +1,31 @@
+{
+    "testcases": [
+        {
+            "id": 1,
+            "testcase": [
+                {
+                    "initial_state": "s0:",
+                    "input_symbol": "scan_req:",
+                    "output_symbol": "scan_resp:",
+                    "next_state": "s1:"
+                },
+                {
+                    "initial_state": "s1:",
+                    "input_symbol": "mutation( con_req , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0, ::$:>]*):mutation( interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0 , ^[<::reset:, ::$:>|<::scan_req:, ::$:>|<::con_req:interval == 0 & timeout == 0 & ll_length == 0 & channel_map == 0 & hop == 0, ::$:>]* )",
+                    "output_symbol": "$:",
+                    "next_state": "s2:"
+                },
+                {
+                    "initial_state": "s2:",
+                    "input_symbol": "pair_req:oob == 0 & no_sc == 0 & key == 0 & llid == 0 & key_disp == 0 & yes_no == 0",
+                    "output_symbol": "pair_resp:",
+                    "next_state": "s4:"
+                }
+            ],
+            "has_mutation": true,
+            "length": 3,
+            "use_count": 0,
+            "num_states_visited": 3
+        }
+    ]
+}
